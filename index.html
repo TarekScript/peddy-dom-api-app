@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paddy.com</title>
+
+    <!-- google font    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- css link  -->
+    <link rel="stylesheet" href="style/style.css">
+    <!-- tailwind and daisyUi -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class="font-lexend">
+    <header>
+
+        <!-- navbar -->
+        <div class="navbar bg-base-100 shadow-sm p-2 md:px-24">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        <li><a>Home</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                </div>
+                <a class="btn btn-ghost text-xl"><img src="images/logo.webp" alt="">Peddy</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a>Home</a></li>
+                    <li><a>Shop</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <a class="bg-gray-50 p-2 rounded-full w-12 h-12"><img
+                        src="https://img.icons8.com/?size=64&id=23378&format=png" alt=""></a>
+            </div>
+        </div>
+
+        <!-- hero section  -->
+        <section class="my-10 flex flex-col items-center">
+            <h3 class="text-2xl font-bold text-gray-500 text-center">Bringing Families Together</h3>
+            <h1 class="text-5xl font-bold text-center my-4 leading-normal">Your Path to Adoption <br> Starts Here</h1>
+            <p class="text-gray-500 text-center">It is a long established fact that a reader will be distracted by the
+                readable content of a page when looking <br> at its layout. The point of using Lorem Ipsum is that it
+                has a.</p>
+            <button class="btn btn-primary-bg mt-5">View More</button>
+            <img src="images/pet.webp" alt="">
+        </section>
+    </header>
+    <main>
+
+    </main>
+
+    <!-- script  -->
+    <script src="script/app.js"></script>
+</body>
+
+</html>
