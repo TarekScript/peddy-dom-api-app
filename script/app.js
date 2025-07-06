@@ -9,27 +9,67 @@ const loadPets = () => {
         .then(res => res.json())
         .then(data => displayPets(data.pets))
 }
+// remove active class from all button 
+const removeActiveStyle = () => {
+    const allActiveBtn = document.getElementsByClassName('category-btn');
+    for (btn of allActiveBtn) {
+        btn.classList.remove('active');
+    }
+}
+
+const loadCategoryWise = category => {
+    const url = `https://openapi.programming-hero.com/api/peddy/category/${category}`;
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            // remove active style from all button
+            removeActiveStyle();
+
+            // add active style 
+            const activeBtn = document.getElementById(`btn-${category}`)
+            activeBtn.classList.add('active')
+            displayPets(data.data)
+        })
+}
 
 // funcion for displaying data 
+
+
+
+// display all categories 
 const displayCatagories = (categories) => {
     const catagoriesContainer = document.getElementById('all-catagories');
 
+
     categories.forEach(category => {
-        const btn = document.createElement('button');
-        btn.innerHTML = `
-        <div class="flex items-center gap-5">
-        <img class="w-8 h-8" src=${category.category_icon} />
-        <span class="text-xl font-bold">${category.category}</span>
-        </div>
+        const div = document.createElement('div');
+        div.innerHTML = `
+        <button id="btn-${category.category}" onclick="loadCategoryWise('${category.category}')" class="flex items-center gap-5 category-btn btn md:px-12, md:py-8 rounded-lg bg-gray-200">
+            <img class="w-8 h-8" src=${category.category_icon} />
+            <span class="text-xl font-bold">${category.category}</span>
+        </button>
         `;
-        btn.classList.add('btn', 'md:px-12', 'md:py-8', 'rounded-lg', 'bg-gray-200')
-        catagoriesContainer.appendChild(btn);
+
+        catagoriesContainer.appendChild(div);
     })
 }
 
 const displayPets = (pets) => {
-    const petsContainer = document.getElementById('show-pets')
+    const petsContainer = document.getElementById('show-pets');
+    petsContainer.innerHTML = '';
+    if (pets.length == 0) {
+        petsContainer.classList.remove('grid')
+        petsContainer.innerHTML = `
+        <div class="flex flex-col items-center justify-center my-12 space-y-4">
+            <img src='../images/error.webp' />
+            <h1 class="text-xl text-center md:text-4xl font-bold">No Information Available</h1>
+            <p class="text-gray-400 text-center">It is a long established fact that a reader will be distracted by the readable content  of a page when looking at <br/> its layout. The point of using Lorem Ipsum is that it has a.</p>
+        </div>
+        `
+        return;
+    }
     pets.forEach(pet => {
+        petsContainer.classList.add('grid')
         const petCard = document.createElement('div');
         petCard.innerHTML = `
         <div class="card bg-base-100  shadow-sm">
