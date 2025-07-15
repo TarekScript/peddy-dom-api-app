@@ -42,7 +42,7 @@
                         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                         <li><a>Home</a></li>
                         <li><a>Shop</a></li>
-                        <li><a>Contact</a></li>
+                        <li><a href="#my-footeeer">Contact</a></li>
                     </ul>
                 </div>
                 <a class="btn btn-ghost text-xl"><img src="images/logo.webp" alt="">Peddy</a>
@@ -51,7 +51,7 @@
                 <ul class="menu menu-horizontal px-1">
                     <li><a>Home</a></li>
                     <li><a>Shop</a></li>
-                    <li><a>Contact</a></li>
+                    <li><a href="#my-footeeer">Contact</a></li>
                 </ul>
             </div>
             <div class="navbar-end">
@@ -67,7 +67,7 @@
             <p class="text-gray-500 text-center">It is a long established fact that a reader will be distracted by the
                 readable content of a page when looking <br> at its layout. The point of using Lorem Ipsum is that it
                 has a.</p>
-            <button class="btn btn-primary-bg mt-5">View More</button>
+            <a href="#my-all-pets"> <button class="btn btn-primary-bg mt-5">View More</button></a>
             <img src="images/pet.webp" alt="">
         </section>
     </header>
@@ -86,7 +86,7 @@
             </div>
 
             <!-- showin all pets -->
-            <section class="grid grid-cols-1 md:grid-cols-3  lg:grid-cols-4 gap-8">
+            <section id="my-all-pets" class="grid grid-cols-1 md:grid-cols-3  lg:grid-cols-4 gap-8">
                 <div id="show-pets"
                     class="md:col-span-2 lg:col-span-3 border-2 border-[#1313131A] p-4 grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-4">
 
@@ -135,6 +135,35 @@
 
     </main>
 
+    <!-- footer  -->
+    <footer id="my-footeeer" class=" justify-around mt-5 footer sm:footer-horizontal bg-black text-white p-10">
+        <nav>
+            <h6 class="flex items-center gap-4 font-bold text-2xl"><img src="images/logo.webp" alt=""> Paddy</h6>
+            <a class="link link-hover">Branding</a>
+            <a class="link link-hover">Design</a>
+            <a class="link link-hover">Marketing</a>
+            <a class="link link-hover">Advertisement</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Company</h6>
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Contact</a>
+            <a class="link link-hover">Jobs</a>
+            <a class="link link-hover">Press kit</a>
+        </nav>
+
+        <form>
+            <h6 class="footer-title">Drop a Message</h6>
+            <fieldset class="w-80">
+                <div class="w-11/12 my-4">
+                    <input type="text" placeholder="Enter Your Email"
+                        class="placeholder-black input input-bordered join-item" />
+                    <button
+                        class="w-full rounded-lg mt-4 bg-[#0E7A81] border-0 btn btn-primary join-item">Subscribe</button>
+                </div>
+            </fieldset>
+        </form>
+    </footer>
     <!-- script  -->
     <script src="script/app.js"></script>
 
