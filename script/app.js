@@ -32,6 +32,18 @@ const loadCategoryWise = category => {
         })
 }
 
+// sorting based on price 
+const sortByPrice = () => {
+    fetch('https://openapi.programming-hero.com/api/peddy/pets')
+        .then(res => res.json())
+        .then(data => {
+            removeActiveStyle();
+            myPets = data.pets;
+            myPets.sort((a, b) => (b.price ?? 0) - (a.price ?? 0))
+            displayPets(myPets)
+        })
+}
+
 // funcion for displaying data 
 
 
